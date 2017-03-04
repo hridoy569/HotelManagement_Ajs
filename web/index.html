@@ -1,0 +1,2021 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hotel_Java</title>
+
+        <meta name="description" content="Oxygen .">
+        <meta name="author" content="Themeum">
+        <meta name="copyright" content="Themeum">
+        <meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+        <meta name="date" content="2014-08-12T00:00:00+02:00">
+
+        <link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+        <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+        <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+        <script src="http://code.angularjs.org/1.2.16/angular-resource.js"></script>
+        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+        <script src="js/myApp.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!--        <script src="assets/js/jquery.js"></script>-->
+
+        <script src="assets/js/jquery.scrollTo.js"></script>
+        <script src="assets/js/jquery.easing.js"></script>
+
+        <script>document.createElement('section'); var duration = '500', easing = 'swing';</script>
+        <script src="assets/js/script.js"></script>
+
+
+
+
+        <style>
+            html{background-color:#FFFFFF;color:#383838;}
+            ::-moz-selection{background:#444444;color:#DDDDDD;}
+            ::selection{background:#444444;color:#DDDDDD;}
+            #documenter_sidebar #documenter_logo{background-image:url();}
+            a{color:#222222;}
+            .btn {
+                border-radius:3px;
+            }
+
+            .btn-primary {
+                background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+                background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+                background-image: -webkit-gradient(linear, 0 0, 0 0088CC, from(#DDDDDD), to(#0044CC));
+                background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+                background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+                background-image: linear-gradient(top, #0088CC, #0044CC);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+                border-color: #0044CC #0044CC #bfbfbf;
+                color:#FFFFFF;
+            }
+            .btn-primary:hover,
+            .btn-primary:active,
+            .btn-primary.active,
+            .btn-primary.disabled,
+            .btn-primary[disabled] {
+                border-color: #0088CC #0088CC #bfbfbf;
+                background-color: #0044CC;
+            }
+            hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+            #documenter_sidebar, #documenter_sidebar ul a{background-color:#111;color:#222222;}
+            #documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #111;}
+            #documenter_sidebar ul{border-top:1px solid #111;}
+            #documenter_sidebar ul a{border-top:1px solid #111;border-bottom:1px solid #111;color:#fff;}
+            #documenter_sidebar ul a:hover{background:#222;color:#DDDDDD;border-top:1px solid #444444;}
+            #documenter_sidebar ul a.current{background:#222;color:#DDDDDD;border-top:1px solid #444444;}
+            #documenter_copyright{display:block !important;visibility:visible !important;}
+        </style>
+
+    </head>
+    <body class="documenter-project-oxygen" ng-app="myApp" >
+        <div id="documenter_sidebar">
+            <a href="#documenter_cover" id="documenter_logo"></a>
+            <ul id="documenter_nav">
+                <li><a class="current" href="#Hotel_Status">Hotel Status</a></li>
+
+                <li><a href="#Guest_Booking" title="Trun off preloader">Guest Booking</a></li>
+                <li><a href="#Services" title="Using Contact Form">Services</a></li>
+                <li><a href="#Bill" title="Google map">Bill</a></li>
+                <li><a href="#CheckIn_Out" title="Credits">CheckIn & Out</a></li>
+                <li><a href="#Admin" title="Thank You">Admin</a></li>
+
+            </ul>
+            <div id="documenter_copyright">Copyright Themeum 2014<br>
+                made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+            </div>
+        </div>
+        <div id="documenter_content">
+            <section id="Hotel_Status">
+                <h1>Hotel Status</h1>
+                <table>
+                    <tr ng-controller="guestBctrl" >
+                        <td style="width: 55%">
+                            <div class="panel panel-default">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 101</strong></div>
+                                                <div class="panel-body">
+                                                    Not Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="margin: 10%">
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 102</strong></div>
+                                                <div class="panel-body">
+                                                    Not Available
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 103</strong></div>
+                                                <div class="panel-body">
+                                                    Not Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 104</strong></div>
+                                                <div class="panel-body">
+                                                    Not Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 105</strong></div>
+                                                <div class="panel-body">
+                                                    Not Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="margin: 10%">
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 106</strong></div>
+                                                <div class="panel-body">
+                                                    Not Available
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 107</strong></div>
+                                                <div class="panel-body">
+                                                    Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 108</strong></div>
+                                                <div class="panel-body">
+                                                    Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 109</strong></div>
+                                                <div class="panel-body">
+                                                    Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="margin: 10%">
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 110</strong></div>
+                                                <div class="panel-body">
+                                                    Available
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 111</strong></div>
+                                                <div class="panel-body">
+                                                    Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="panel panel-default" style="width:150px; height: 130px; text-align: center">
+                                                <div class="panel-heading"><strong>Room 112</strong></div>
+                                                <div class="panel-body">
+                                                    Available
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+
+                        <td style="width: 35%">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">ToDo List</div>
+                                <div class="panel-body" ng-controller="todoctrl">
+                                    <table class="table table-hover table-responsive">
+                                        <tr>
+                                            <th>Actions</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr ng-repeat="t in todos| filter:test | orderBy:'countryName'">
+                                            <td> {{ t.Actions}}</td>
+                                            <td >{{ t.Date}}</td>
+                                            <td >{{ t.Time}}</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                    <!--                                                    <button type="button" ng-click="editTodo(t)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>-->
+                                                    <button type="button" class="btn btn-default" ng-click="deleteTodo(t)"><i class="glyphicon glyphicon-remove"></i></button>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </td>
+                        <!--                        <td>
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-heading">Panel Heading</div>
+                                                        <div class="panel-body">Panel Content</div>
+                                                    </div>
+                                                </td>-->
+                    </tr>
+                </table>
+
+
+
+            </section>
+
+            <section id="Guest_Booking" ng-controller="guestBctrl">
+                <!--                <div class="page-header"><h3>Trun off preloader</h3></div>-->
+                <div>
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home">Current</a></li>
+                        <li><a data-toggle="tab" href="#menu1" >Future</a></li>
+                        <li><a data-toggle="tab" href="#menu2">Archived</a></li>
+                        <li><a data-toggle="tab" href="#menu3">New/Edit</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+
+                            <!--                            <h2>Panel Heading</h2>--><br>
+                            <div class="alert alert-info" ng-if="messege">
+                                <button type="button" class="close" data-dismiss="alert" ng-click="clearMessage()">&times;</button>
+                                {{messege}}
+                            </div>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"><br>
+
+                                </div>
+                                <div class="panel-body">
+
+                                    <!--<button type="button" class="btn btn-primary btn-info pull-right" data-toggle="modal" data-target="#myModal">Add New</button>-->
+                                    <div>
+                                        <form>
+                                            <div class="input-group pull-right" style="width: 250px">
+                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default btn-default" type="submit" ng-click="reload()">
+                                                        <i class="glyphicon glyphicon-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <h2>
+                                        Guest List
+                                    </h2>
+                                    <hr>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Booking No.</th>
+                                                <th>Name</th>
+                                                <th>Room No.</th>
+                                                <th>Arrival</th>
+                                                <th>Departure</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                         <!--| filter : paginate"-->
+                                            <tr ng-repeat="x in guests| filter:current | filter:test | orderBy:'bookingNo'">
+                                                <td>{{x.BookingNo}}</td>
+                                                <td>{{x.Name}}</td>
+                                                <td>{{x.RoomNo}}</td>
+                                                <td>{{x.DateOfArival}}</td>
+                                                <td>{{x.DateOfDeparture}}</td>
+                                                <td>{{x.CheckedStatus}}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>
+                                                        <button type="button" ng-click="editGuest(x)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalDelete" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-erase"></i></button>
+
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <pagination total-items="totalItems" ng-model="currentPage"
+                                                max-size="5" boundary-links="true"
+                                                items-per-page="numPerPage" class="pagination-sm">
+                                    </pagination>
+                                </div>
+                            </div>                                                                                                                                                                                                                                                                                                                                                                                                  
+
+                        </div>
+                        <!-- Modal guestDetails -->
+                        <div class="modal fade" id="guestDetails" role="dialog">
+                            <div class="modal-dialog modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Guest Details</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <table style="width:100%">
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Booking No.</label>{{guestDetail.BookingNo}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Name</label>{{guestDetail.Title}}{{" "}}{{guestDetail.Name}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Room No.</label>{{guestDetail.RoomNo}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Gender</label>{{guestDetail.Gender}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Booking Date</label>{{guestDetail.BookingDate}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Nationality</label>{{guestDetail.Nationality}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Date Of Arival</label>{{guestDetail.DateOfArival}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Address</label>{{guestDetail.RAddress}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Date Of Departure</label>{{guestDetail.DateOfDeparture}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Passport No.</label>{{guestDetail.PassportNo}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Booking For Days</label>{{guestDetail.BookingForDays}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Visa No.</label>{{guestDetail.VisaNo}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">No. Of Person</label>{{guestDetail.NoOfPerson}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Phone No.</label>{{guestDetail.PhoneNo}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Relationship</label>{{guestDetail.Relationship}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Email</label>{{guestDetail.Email}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Checked Status</label>{{guestDetail.CheckedStatus}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Modal guestDetails -->
+                        <div class="modal fade" id="guestSubmit" role="dialog">
+                            <div class="modal-dialog modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Guest Details</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <table style="width:100%">
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Booking No.</label>{{guestForm.BookingNo}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Name</label>{{guestForm.Title}}{{" "}}{{guestForm.Name}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Room No.</label>{{guestForm.RoomNo}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Gender</label>{{guestForm.Gender}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Booking Date</label>{{guestForm.BookingDate}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Nationality</label>{{guestForm.Nationality}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Date Of Arival</label>{{guestForm.DateOfArival}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Address</label>{{guestForm.RAddress}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Date Of Departure</label>{{guestForm.DateOfDeparture}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Passport No.</label>{{guestForm.PassportNo}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Booking For Days</label>{{guestForm.BookingForDays}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Visa No.</label>{{guestForm.VisaNo}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">No. Of Person</label>{{guestForm.NoOfPerson}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Phone No.</label>{{guestForm.PhoneNo}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Relationship</label>{{guestForm.Relationship}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Email</label>{{guestForm.Email}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:50%">
+                                                    <label class="control-label col-sm-5">Checked Status</label>{{guestForm.CheckedStatus}}<br>
+                                                </td>
+                                                <td style="width:50%">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="submitGuest()">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <!-- Modal3 -->
+                        <div class="modal fade" id="myModalDelete" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Are you sure?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <strong>
+                                            You are going to delete {{guestDetail.Title}}{{" "}}{{guestDetail.Name}}!
+                                        </strong>
+
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="deleteGuest(guestDetail)">Yes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div id="menu1" class="tab-pane fade">
+                            <!--                            <h2>Panel Heading</h2>--><br>
+                            <div class="alert alert-info" ng-if="messege">
+                                <button type="button" class="close" data-dismiss="alert" ng-click="clearMessage()">&times;</button>
+                                {{messege}}
+                            </div>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"><br>
+
+                                </div>
+                                <div class="panel-body">
+
+                                    <!--<button type="button" class="btn btn-primary btn-info pull-right" data-toggle="modal" data-target="#myModal">Add New</button>-->
+                                    <div>
+                                        <form>
+                                            <div class="input-group pull-right" style="width: 250px">
+                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default btn-default" type="submit" ng-click="reload()">
+                                                        <i class="glyphicon glyphicon-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <h2>
+                                        Guest List
+                                    </h2>
+                                    <hr>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Booking No.</th>
+                                                <th>Name</th>
+                                                <th>Room No.</th>
+                                                <th>Arrival</th>
+                                                <th>Departure</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="x in guests| filter:future | filter:test | orderBy:'bookingNo'">
+                                                <td>{{x.BookingNo}}</td>
+                                                <td>{{x.Name}}</td>
+                                                <td>{{x.RoomNo}}</td>
+                                                <td>{{x.DateOfArival}}</td>
+                                                <td>{{x.DateOfDeparture}}</td>
+                                                <td>{{x.CheckedStatus}}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>
+                                                        <button type="button" ng-click="editGuest(x)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalDelete" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-erase"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <!--                            <h2>Panel Heading</h2>--><br>
+                            <div class="alert alert-info" ng-if="messege">
+                                <button type="button" class="close" data-dismiss="alert" ng-click="clearMessage()">&times;</button>
+                                {{messege}}
+                            </div>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"><br>
+
+                                </div>
+                                <div class="panel-body">
+
+                                    <!--<button type="button" class="btn btn-primary btn-info pull-right" data-toggle="modal" data-target="#myModal">Add New</button>-->
+                                    <div>
+                                        <form>
+                                            <div class="input-group pull-right" style="width: 250px">
+                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default btn-default" type="submit" ng-click="reload()">
+                                                        <i class="glyphicon glyphicon-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <h2>
+                                        Guest List
+                                    </h2>
+                                    <hr>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Booking No.</th>
+                                                <th>Name</th>
+                                                <th>Room No.</th>
+                                                <th>Arrival</th>
+                                                <th>Departure</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="x in guests| filter:archived | filter:test | orderBy:'bookingNo'">
+                                                <td>{{x.BookingNo}}</td>
+                                                <td>{{x.Name}}</td>
+                                                <td>{{x.RoomNo}}</td>
+                                                <td>{{x.DateOfArival}}</td>
+                                                <td>{{x.DateOfDeparture}}</td>
+                                                <td>{{x.CheckedStatus}}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>
+                                                        <button type="button" ng-click="editGuest(x)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModalDelete" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-erase"></i></button>
+
+                                                    </div>
+                                                </td>
+                                                <!--                                                <td><a ng-click="editGuest(x)" class="btn btn-info">Edit</a></td>
+                                                                                                <td><a ng-click="deleteGuest(x)" class="btn btn-danger">Delete</a></td>-->
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu3" class="tab-pane fade">
+                            <br>
+                            <div class="alert alert-info" ng-if="messege">
+                                <button type="button" class="close" data-dismiss="alert" ng-click="clearMessage()">&times;</button>
+                                {{messege}}
+                            </div>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">
+                                    Add New Guest
+                                </div>
+                                <div class="panel-body">
+
+
+                                    <hr>
+                                    <!--<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>-->
+                                    <form class="form-horizontal">
+                                        <table>
+                                            <tr>
+                                                <td>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Title</label>
+                                                        <div class="col-md-8 selectContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                                <select name="state" class="form-control selectpicker" ng-model="guestForm.Title">
+                                                                    <option value="Mr." selected>Mr.</option>
+                                                                    <option value="Mrs.">Mrs.</option>
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                                <td>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Full Name</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                                <input  name="first_name" placeholder="Full Name" class="form-control"  type="text" ng-model="guestForm.Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Gender</label>
+                                                        <div class="col-md-8 selectContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                                <select name="state" class="form-control selectpicker" ng-model="guestForm.Gender">
+                                                                    <option value="Male" >Male</option>
+                                                                    <option value="Female">Female</option>
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Nationality</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="address" placeholder="Nationality" class="form-control" type="text" ng-model="guestForm.Nationality">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Passport No.</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="address" placeholder="Passport Number" class="form-control" type="text" ng-model="guestForm.PassportNo">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Visa No.</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="address" placeholder="Visa Number" class="form-control" type="text" ng-model="guestForm.VisaNo">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Residential Address</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="address" placeholder="Residential Address" class="form-control" type="text" ng-model="guestForm.RAddress">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Phone #</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                                                <input name="phone" placeholder="(845)555-1212" class="form-control" type="text" ng-model="guestForm.PhoneNo">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">E-Mail</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                                <input name="email" placeholder="E-Mail Address" class="form-control"  type="text" ng-model="guestForm.Email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Room No.</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="city" placeholder="Room Number" class="form-control"  type="text" ng-model="guestForm.RoomNo">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Date Of Arival</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="zip" placeholder="yyyy/mm/dd" class="form-control"  type="text" ng-model="guestForm.DateOfArival">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Date Of Departure</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="zip" placeholder="yyyy/mm/dd" class="form-control"  type="text" ng-model="guestForm.DateOfDeparture">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Booking For Days</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="city" placeholder="Days" class="form-control"  type="text" ng-model="guestForm.BookingForDays">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Number Of Person</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="address" placeholder="1" class="form-control" type="text" ng-model="guestForm.NoOfPerson">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Relationship</label>
+                                                        <div class="col-md-8 inputGroupContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                                <input name="city" placeholder="Relationship" class="form-control"  type="text" ng-model="guestForm.Relationship">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label">Checked Status</label>
+                                                        <div class="col-md-8 selectContainer">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                                <select name="state" class="form-control selectpicker" ng-model="guestForm.CheckedStatus">
+                                                                    <option value="Not Yet" selected>Not Yet</option>
+                                                                    <option value="Checked In">Checked In</option>
+                                                                    <option value="Checked Out">Checked Out</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </td>
+                                                <td>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-4">Booking No.</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" ng-model="guestForm.BookingNo">
+                                                                <div class="input-group-btn">
+                                                                    <button class="btn btn-default btn-default" type="submit" ng-click="editGuest(x)">
+                                                                        <i class="glyphicon glyphicon-search "></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label"></label>
+                                                        <div class="col-md-8">
+                                                            <input type="submit" value="Next" data-toggle="modal" data-target="#guestSubmit" class="btn btn-default" />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="Services" ng-controller="serviceController">
+                <!--<div class="page-header"><h3>Using Contact Form</h3><hr class="notop"></div>-->
+                <div>
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home1">Add Services</a></li>
+                        <li><a data-toggle="tab" href="#menu11" >Records</a></li>
+
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home1" class="tab-pane fade in active">
+                            <br>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">Service Form</div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal">
+                                        <table style="margin:auto; width: 70%">
+                                            <tr>
+                                                <td style="width: 50%">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Id</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="serviceForm.id" ng-readonly="true">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 50%">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Booking No.</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="serviceForm.BookingNo" placeholder="Type here">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <hr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Breakfast</label>
+                                                        <div class="col-sm-6 input-group">
+                                                            <span class="input-group-addon btn-info" ><i class="glyphicon glyphicon-plus"></i></span>
+                                                            <input type="number" class="form-control" ng-model="serviceForm.Breakfast" ng-change="updateTotal();" ng-init="serviceForm.Breakfast = 0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Lunch</label>
+                                                        <div class="col-sm-6 input-group">
+                                                            <span class="input-group-addon btn-info" ><i class="glyphicon glyphicon-plus"></i></span>
+                                                            <input type="number" class="form-control" ng-model="serviceForm.Lunch" ng-change="updateTotal();" ng-init="serviceForm.Lunch = 0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Dinner</label>
+                                                        <div class="col-sm-6 input-group">
+                                                            <span class="input-group-addon btn-info" ><i class="glyphicon glyphicon-plus"></i></span>
+                                                            <input type="number" class="form-control" ng-model="serviceForm.Dinner" ng-change="updateTotal();" ng-init="serviceForm.Dinner = 0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Laundry</label>
+                                                        <div class="col-sm-6 input-group">
+                                                            <span class="input-group-addon btn-info" ><i class="glyphicon glyphicon-plus"></i></span>
+                                                            <input type="number" class="form-control" ng-model="serviceForm.Laundary" ng-change="updateTotal();" ng-init="serviceForm.Laundary = 0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Telephone</label>
+                                                        <div class="col-sm-6 input-group">
+                                                            <span class="input-group-addon btn-info" ><i class="glyphicon glyphicon-plus"></i></span>
+                                                            <input type="number" class="form-control" ng-model="serviceForm.Telephone" ng-change="updateTotal();" ng-init="serviceForm.Telephone = 0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Gym</label>
+                                                        <div class="col-sm-6 input-group">
+                                                            <span class="input-group-addon btn-info" ><i class="glyphicon glyphicon-plus"></i></span>
+                                                            <input type="number" class="form-control" ng-model="serviceForm.Gym" ng-change="updateTotal();" ng-init="serviceForm.Gym = 0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>       
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Swimming Pool</label>
+                                                        <div class="col-sm-6 input-group">
+
+                                                            <span class="input-group-addon btn-info" ><i class="glyphicon glyphicon-plus"></i></span>
+                                                            <input type="number" class="form-control" ng-model="serviceForm.SwimmingPool" ng-change="updateTotal();" ng-init="serviceForm.SwimmingPool = 0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Total Charge</label>
+                                                        <div class="col-sm-6 input-group">
+                                                            <span class="input-group-addon btn-info" ><i class="glyphicon glyphicon-usd"></i></span>
+                                                            <input type="text" class="form-control" ng-model="serviceForm.TotalServiceCharge" ng-readonly="true" ng-init="serviceForm.TotalServiceCharge = 0">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5"></label>
+                                                        <div class="col-sm-6">
+
+                                                            <button type="submit" class="btn btn-info col-sm-12" data-dismiss="modal" ng-click="submitS()">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu11" class="tab-pane fade">
+                            <br>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"><br></div>
+                                <div class="panel-body">
+
+                                    <div>
+                                        <form>
+                                            <div class="input-group pull-right" style="width: 250px">
+                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default btn-default" type="submit">
+                                                        <i class="glyphicon glyphicon-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <h2>
+                                        Service Records
+                                    </h2>
+                                    <hr>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Booking No.</th>
+                                                <th>Breakfast</th>
+                                                <th>Lunch</th>
+                                                <th>Dinner</th>
+                                                <th>Laundry</th>
+                                                <th>Telephone</th>
+                                                <th>Gym</th>
+                                                <th>Swimming Pool</th>
+                                                <th>Total Charge</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                         <!--| filter : paginate"-->
+                                            <tr ng-repeat="s in services| filter:test | orderBy:'bookingNo'">
+                                                <td>{{s.BookingNo}}</td>
+                                                <td>{{s.Breakfast}}</td>
+                                                <td>{{s.Lunch}}</td>
+                                                <td>{{s.Dinner}}</td>
+                                                <td>{{s.Laundary}}</td>
+                                                <td>{{s.Telephone}}</td>
+                                                <td>{{s.Gym}}</td>
+                                                <td>{{s.SwimmingPool}}</td>
+                                                <td>{{s.TotalServiceCharge}}</td>
+                                                <td>{{s.ServiceDate}}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                        <button type="button" ng-click="editService(s)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                                        <button type="button" class="btn btn-default" ng-click="deleteService(s)"><i class="glyphicon glyphicon-erase"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <pagination total-items="totalItems" ng-model="currentPage"
+                                                max-size="5" boundary-links="true"
+                                                items-per-page="numPerPage" class="pagination-sm">
+                                    </pagination>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="Bill" ng-controller="billCtrl">
+                <!--<div class="page-header"><h3>Google map</h3><hr class="notop"></div>-->
+                <div ng-controller="guestBctrl">
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home2">Create</a></li>
+                        <li><a data-toggle="tab" href="#menu12" >Bills</a></li>
+                        <li><a data-toggle="tab" href="#menu22">History</a></li>
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home2" class="tab-pane fade in active">
+                            <br>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">Bill Form</div>
+                                <div class="panel-body">
+
+
+                                    <hr>
+
+                                    <table style="margin:auto; width: 70%">
+                                        <tr>
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Bill No.</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.BillEntryDate">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+
+
+
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Booking No.</label>
+                                                        <div class="col-sm-6">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" ng-model="billForm.BookingNo">
+                                                                <div class="input-group-btn">
+                                                                    <button class="btn btn-default btn-default" type="submit">
+                                                                        <i class="glyphicon glyphicon-search "></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Billing Days</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.BillingDays">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Room Rent</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.TotalRoomRent">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Service Charge</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.ServiceCharge">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Gross Bill Amount</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.GrossBillAmount">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Service Tax</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.ServiceTax">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Discount Allowed</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.DiscountAllowed">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Billing Mode</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.BillingMode">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Net Bill Ammount</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.NetBillAmount">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Card Number</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.CardNumber">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Ammount Recived</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.AmountRecived">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5">Outstanding</label>
+                                                        <div class="col-sm-6">
+                                                            <input type="text" class="form-control" ng-model="billForm.OutstandingAmount">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </td>
+
+                                            <td>
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label class="control-label col-sm-5"></label>
+                                                        <div class="col-sm-6">
+                                                            <button type="submit" class="btn btn-info col-sm-12" data-dismiss="modal" ng-click="submitBill()">Submit</button>
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                            </td>
+                                        </tr>
+
+
+                                        <!--<tr>-->
+                                        <!--<td style="padding-left: 10px"><label for="">Outstanding </label></td>-->
+                                        <!--<td style="padding-left: 10px"><input type="text" placeholder="0"></td>-->
+                                        <!--<td style="padding-left: 60px"></td>-->
+                                        <!--<td style="padding-left: 10px"><input type="button" value="Total"><input type="submit" value="Submit"></td>-->
+                                        <!--</tr>-->
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu12" class="tab-pane fade">
+                            <br>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"><br></div>
+                                <div class="panel-body">
+
+                                    <div>
+                                        <form>
+                                            <div class="input-group pull-right" style="width: 250px">
+                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default btn-default" type="submit">
+                                                        <i class="glyphicon glyphicon-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <h2>
+                                        Bill Records
+                                    </h2>
+                                    <hr>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Bill No.</th>
+                                                <!--                                                <th>Entry Date</th>-->
+                                                <th>Booking No.</th>
+                                                <!--<th>Bill For Days</th>-->
+                                                <th>Room Rent</th>
+                                                <th>Service Charge</th>
+                                                <th>Gross Amount</th>
+                                                <!--<th>Service Tax</th>-->
+                                                <!--<th>Discount</th>-->
+                                                <th>Net Amount</th>
+                                                <th>Bill Mode</th>
+                                                <!--<th>Card Number</th>-->
+                                                <th>Amount Received</th>
+                                                <th>Due Amount</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                         <!--| filter : paginate"-->
+                                            <tr ng-repeat="b in bills| filter:test | orderBy:'BillNo'">
+                                                <td>{{b.BillNo}}</td>
+                                                <!--<td>{{b.BillEntryDate}}</td>-->
+                                                <td>{{b.BookingNo}}</td>
+                                                <!--<td>{{b.BillingDays}}</td>-->
+                                                <td>{{b.TotalRoomRent}}</td>
+                                                <td>{{b.ServiceCharge}}</td>
+                                                <td>{{b.GrossBillAmount}}</td>
+                                                <!--<td>{{b.ServiceTax}}</td>-->
+                                                <!--<td>{{b.DiscountAllowed}}</td>-->
+                                                <td>{{b.NetBillAmount}}</td>
+                                                <td>{{b.BillingMode}}</td>
+                                                <!--<td>{{b.CardNumber}}</td>-->
+                                                <td>{{b.AmountRecived}}</td>
+                                                <td>{{b.OutstandingAmount}}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                        <button type="button" ng-click="editBill(b)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                                        <button type="button" class="btn btn-default" ng-click="deleteBill(b)"><i class="glyphicon glyphicon-erase"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <pagination total-items="totalItems" ng-model="currentPage"
+                                                max-size="5" boundary-links="true"
+                                                items-per-page="numPerPage" class="pagination-sm">
+                                    </pagination>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu22" class="tab-pane fade">
+                            <br>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"><br></div>
+                                <div class="panel-body" ng-controller="billHCtrl">
+
+                                    <div>
+                                        <form>
+                                            <div class="input-group pull-right" style="width: 250px">
+                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default btn-default" type="submit">
+                                                        <i class="glyphicon glyphicon-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <h2>
+                                        Bill History
+                                    </h2>
+                                    <hr>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Bill No.</th>
+                                                <!--                                                <th>Entry Date</th>-->
+                                                <th>Booking No.</th>
+                                                <!--<th>Bill For Days</th>-->
+                                                <th>Room Rent</th>
+                                                <th>Service Charge</th>
+                                                <th>Gross Amount</th>
+                                                <!--<th>Service Tax</th>-->
+                                                <!--<th>Discount</th>-->
+                                                <th>Net Amount</th>
+                                                <th>Bill Mode</th>
+                                                <!--<th>Card Number</th>-->
+                                                <th>Amount Received</th>
+                                                <th>Due Amount</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                         <!--| filter : paginate"-->
+                                            <tr ng-repeat="b in bills| filter:test | orderBy:'BillNo'">
+                                                <td>{{b.BillNo}}</td>
+                                                <!--<td>{{b.BillEntryDate}}</td>-->
+                                                <td>{{b.BookingNo}}</td>
+                                                <!--<td>{{b.BillingDays}}</td>-->
+                                                <td>{{b.TotalRoomRent}}</td>
+                                                <td>{{b.ServiceCharge}}</td>
+                                                <td>{{b.GrossBillAmount}}</td>
+                                                <!--<td>{{b.ServiceTax}}</td>-->
+                                                <!--<td>{{b.DiscountAllowed}}</td>-->
+                                                <td>{{b.NetBillAmount}}</td>
+                                                <td>{{b.BillingMode}}</td>
+                                                <!--<td>{{b.CardNumber}}</td>-->
+                                                <td>{{b.AmountRecived}}</td>
+                                                <td>{{b.OutstandingAmount}}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                        <!--<button type="button" ng-click="editBill(b)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>-->
+                                                        <button type="button" class="btn btn-default" ng-click="deleteBill(b)"><i class="glyphicon glyphicon-erase"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <pagination total-items="totalItems" ng-model="currentPage"
+                                                max-size="5" boundary-links="true"
+                                                items-per-page="numPerPage" class="pagination-sm">
+                                    </pagination>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="CheckIn_Out" ng-controller="guestBctrl" >
+                <!--<div class="page-header"><h3>Credits</h3><hr class="notop"></div>-->
+                <div>
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home3">Current</a></li>
+                        <li><a data-toggle="tab" href="#home31">Future</a></li>
+                        <li><a data-toggle="tab" href="#menu13" >Rooms</a></li>
+
+
+                    </ul>
+
+                    <div class="tab-content" ng-controller="roomController">
+                        <div id="home3" class="tab-pane fade in active">
+                            <br>
+                            <div class="alert alert-info" ng-if="messege">
+                                <button type="button" class="close" data-dismiss="alert" ng-click="clearMessage()">&times;</button>
+                                {{messege}}
+                            </div>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"><br></div>
+                                <div class="panel-body">
+
+                                    <div>
+                                        <form>
+                                            <div class="input-group pull-right" style="width: 250px">
+                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default btn-default" type="submit" ng-click="reload()">
+                                                        <i class="glyphicon glyphicon-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <h2>
+                                        Checked Status
+                                    </h2>
+                                    <hr>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Booking No.</th>
+                                                <th>Name</th>
+                                                <th>Room No.</th>
+                                                <th>Arrival</th>
+                                                <th>Departure</th>
+                                                <th>Status</th>
+                                                <th>Checked In|Out</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                         <!--| filter : paginate"-->
+                                            <tr ng-repeat="x in guests| filter:current | filter:test | orderBy:'bookingNo'">
+                                                <td>{{x.BookingNo}}</td>
+                                                <td>{{x.Name}}</td>
+                                                <td>{{x.RoomNo}}</td>
+                                                <td>{{x.DateOfArival}}</td>
+                                                <td>{{x.DateOfDeparture}}</td>
+                                                <td>{{x.CheckedStatus}}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                        <button type="button" ng-click="checkedIn(x)" class="btn btn-default"><i class="glyphicon glyphicon-log-in"></i></button>
+                                                        <button type="button" ng-click="checkedOut(x)" class="btn btn-default" ><i class="glyphicon glyphicon-log-out"></i></button>
+
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <pagination total-items="totalItems" ng-model="currentPage"
+                                                max-size="5" boundary-links="true"
+                                                items-per-page="numPerPage" class="pagination-sm">
+                                    </pagination>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="home31" class="tab-pane fade in active">
+                            <br>
+                            <div class="alert alert-info" ng-if="messege">
+                                <button type="button" class="close" data-dismiss="alert" ng-click="clearMessage()">&times;</button>
+                                {{messege}}
+                            </div>
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"><br></div>
+                                <div class="panel-body">
+
+                                    <div>
+                                        <form>
+                                            <div class="input-group pull-right" style="width: 250px">
+                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default btn-default" type="submit" ng-click="reload()">
+                                                        <i class="glyphicon glyphicon-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <h2>
+                                        Checked Status
+                                    </h2>
+                                    <hr>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Booking No.</th>
+                                                <th>Name</th>
+                                                <th>Room No.</th>
+                                                <th>Arrival</th>
+                                                <th>Departure</th>
+                                                <th>Status</th>
+                                                <th>Checked In|Out</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>                         <!--| filter : paginate"-->
+                                            <tr ng-repeat="x in guests| filter:future | filter:test | orderBy:'bookingNo'">
+                                                <td>{{x.BookingNo}}</td>
+                                                <td>{{x.Name}}</td>
+                                                <td>{{x.RoomNo}}</td>
+                                                <td>{{x.DateOfArival}}</td>
+                                                <td>{{x.DateOfDeparture}}</td>
+                                                <td>{{x.CheckedStatus}}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                        <button type="button" ng-click="checkedIn(x)" class="btn btn-default"><i class="glyphicon glyphicon-log-in"></i></button>
+                                                        <button type="button" ng-click="checkedOut(x)" class="btn btn-default" ><i class="glyphicon glyphicon-log-out"></i></button>
+
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <pagination total-items="totalItems" ng-model="currentPage"
+                                                max-size="5" boundary-links="true"
+                                                items-per-page="numPerPage" class="pagination-sm">
+                                    </pagination>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="menu13" class="tab-pane fade">
+                            <br>
+                            <div class="panel panel-default" >
+
+                                <table>
+                                    <tr>
+                                        <td style="width: 65%">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading"> Room List</div>
+                                                <div class="panel-body">
+                                                    <div>
+                                                        <form>
+                                                            <div class="input-group pull-right" style="width: 250px">
+                                                                <input type="text" class="form-control" placeholder="Search" ng-model="test">
+                                                                <div class="input-group-btn">
+                                                                    <button class="btn btn-default btn-default" type="submit" ng-click="reload()">
+                                                                        <i class="glyphicon glyphicon-search "></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <h2>
+
+                                                    </h2>
+                                                    <hr>
+
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Room No</th>
+                                                                <th>Room Type</th>
+                                                                <th>Room Rent</th>
+                                                                <th>Status</th>
+                                                                <th>Booked By</th>
+                                                                <th>Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>                         <!--| filter : paginate"-->
+                                                            <tr ng-repeat="r in rooms| filter:test | orderBy:'RoomNo'">
+                                                                <td> {{ r.RoomNo}}</td>
+                                                                <td> {{ r.RoomType}}</td>
+                                                                <td >{{ r.RoomRent}}</td>
+                                                                <td >{{ r.Status}}</td>
+                                                                <td >{{ r.BookedBy}}</td>
+                                                                <td>
+                                                                    <div class="btn-group">
+                                                                        <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                                        <button type="button" ng-click="editRoom(r)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                                                        <button type="button" class="btn btn-default" ng-click="deleteRoom(r)"><i class="glyphicon glyphicon-erase"></i></button>
+
+
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <pagination total-items="totalItems" ng-model="currentPage"
+                                                                max-size="5" boundary-links="true"
+                                                                items-per-page="numPerPage" class="pagination-sm">
+                                                    </pagination>
+
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td style="width: 35%">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">Add Rooms</div>
+                                                <div class="panel-body">
+                                                    <form ng-submit="submitRoom()">
+                                                        <table class="table table-responsive table-bordered">
+                                                            <tr>
+                                                                <th colspan="2"></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Room No.</td>
+                                                                <td><input type="text" ng-model="roomForm.RoomNo" class="form-control"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Room Type</td>
+                                                                <td><input type="text" ng-model="roomForm.RoomType" class="form-control"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Room Rent</td>
+                                                                <td><input type="text" ng-model="roomForm.RoomRent"  class="form-control"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Status</td>
+                                                                <td>
+                                                                    <select name="state" class="form-control selectpicker" ng-model="roomForm.Status">
+                                                                        <option value="Available" selected>Available</option>
+                                                                        <option value="NotAvailable">NotAvailable</option>
+
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td colspan="2"><input type="submit" value="Submit" class="btn btn-info" /></td>
+                                                            </tr>
+                                                        </table>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <!--                        <td>
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">Panel Heading</div>
+                                                                        <div class="panel-body">Panel Content</div>
+                                                                    </div>
+                                                                </td>-->
+                                    </tr>
+                                </table>
+
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+            <section id="Admin">
+                <!--                <div class="page-header"><h3>Admin Panel</h3></div>-->
+                <div>
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home4">Create User</a></li>
+                        <li><a data-toggle="tab" href="#menu14" >To Do List</a></li>
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="home4" class="tab-pane fade in active" ng-controller="adminctrl">
+                            <br>
+                            <table>
+                                <tr>
+                                    <td style="width: 65%">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Users</div>
+                                            <div class="panel-body">
+
+
+                                                <hr>
+
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>User Name</th>
+                                                            <th>Password</th>
+                                                            <th>Role</th>
+                                                            <th>ImageURL</th>
+                                                            <th>Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="x in admins| filter:test | orderBy:'id'">
+                                                            <td>{{x.Name}}</td>
+                                                            <td>{{x.UserName}}</td>
+                                                            <td>{{x.Password}}</td>
+                                                            <td>{{x.Role}}</td>
+                                                            <td>{{x.ImageUrl}}</td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                                    <button type="button" ng-click="editAdmin(x)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                                                    <button type="button" class="btn btn-default" ng-click="deleteAdmin(x)"><i class="glyphicon glyphicon-erase"></i></button>
+                                                                </div>
+                                                            </td>
+
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td style="width: 35%">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Add User</div>
+                                            <div class="panel-body">
+                                                <div>
+                                                    <form ng-submit="submitAdmin()">
+                                                        <table class="table table-responsive table-bordered">
+
+                                                            <!--                <tr>
+                                                                                <td>id</td>
+                                                                                <td><input type="text" ng-model="adminForm.Id" class="form-control"/></td>
+                                                                            </tr>-->
+                                                            <tr>
+                                                                <td>Name</td>
+                                                                <td><input type="text" ng-model="adminForm.Name" class="form-control"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>UserName</td>
+                                                                <td><input type="text" ng-model="adminForm.UserName"  class="form-control"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Password</td>
+                                                                <td><input type="text" ng-model="adminForm.Password" class="form-control"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Role</td>
+                                                                <td><input type="text" ng-model="adminForm.Role"  class="form-control"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ImageUrl</td>
+                                                                <td><input type="text" ng-model="adminForm.ImageUrl"  class="form-control"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2"><input type="submit" value="Submit" class="btn btn-info" /></td>
+                                                            </tr>
+                                                        </table>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <!--                        <td>
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">Panel Heading</div>
+                                                                    <div class="panel-body">Panel Content</div>
+                                                                </div>
+                                                            </td>-->
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="menu14" class="tab-pane fade" ng-controller="todoctrl">
+                            <br>
+                            <table>
+                                <tr>
+                                    <td style="width: 55%">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Todo List</div>
+                                            <div class="panel-body">
+                                                <table class="table table-hover table-responsive table-bordered">
+                                                    <tr>
+                                                        <th>Actions</th>
+                                                        <th>Date</th>
+                                                        <th>Time</th>
+                                                        <th>Operations</th>
+                                                    </tr>
+                                                    <tr ng-repeat="t in todos| filter:test | orderBy:'countryName'">
+                                                        <td> {{ t.Actions}}</td>
+                                                        <td >{{ t.Date}}</td>
+                                                        <td >{{ t.Time}}</td>
+                                                        <td>
+                                                            <div class="btn-group">
+                                                                <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#guestDetails" ng-click="selectGuest(x)"><i class="glyphicon glyphicon-list"></i></button>-->
+                                                                <button type="button" ng-click="editTodo(t)" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></button>
+                                                                <button type="button" class="btn btn-default" ng-click="deleteTodo(t)"><i class="glyphicon glyphicon-erase"></i></button>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td style="width: 35%">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Add Lists</div>
+                                            <div class="panel-body">
+                                                <form ng-submit="submitTodo()">
+                                                    <table class="table table-responsive table-bordered">
+                                                        <!--                <tr>
+                                                                            <th colspan="2"></th>
+                                                                        </tr>-->
+                                                        <tr>
+                                                            <td>Actions</td>
+                                                            <td><input type="text" ng-model="todoForm.Actions" class="form-control"/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Date</td>
+                                                            <td><input type="text" ng-model="todoForm.Date"  class="form-control"/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Time</td>
+                                                            <td><input type="text" ng-model="todoForm.Time"  class="form-control"/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td colspan="2"><input type="submit" value="Submit" class="btn btn-info" /></td>
+                                                        </tr>
+                                                    </table>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <!--                        <td>
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-heading">Panel Heading</div>
+                                                                    <div class="panel-body">Panel Content</div>
+                                                                </div>
+                                                            </td>-->
+                                </tr>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <!--        <script src="js/messege.js" type="text/javascript"></script>-->
+    </body>
+</html>
